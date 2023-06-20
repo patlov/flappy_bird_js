@@ -8,7 +8,7 @@ const flappyImg = new Image();
 flappyImg.src = 'assets/flappy_dunk.png';
 
 //Game constants
-const FLAP_SPEED = -5;
+const FLAP_SPEED = -3; //Improves the fluidity and accuracy of the bird when moving around the screen
 const BIRD_WIDTH = 40;
 const BIRD_HEIGHT = 30;
 const PIPE_WIDTH = 50;
@@ -157,7 +157,7 @@ function loop() {
 
     // Draw Pipes
     ctx.fillStyle = '#333';
-    ctx.fillRect(pipeX, -100, PIPE_WIDTH, pipeY);
+    ctx.fillRect(pipeX, -50, PIPE_WIDTH, pipeY); // improves the accuracy of the upper column against collision
     ctx.fillRect(pipeX, pipeY + PIPE_GAP, PIPE_WIDTH, canvas.height - pipeY);
 
     // now we would need to add an collision check to display our end-menu
